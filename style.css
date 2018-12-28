@@ -1,0 +1,170 @@
+ body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eb96b4;
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1  {
+    cursor: pointer;
+    user-select: none;
+    text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    -webkit-animation-name: popupAvatar; 
+    -webkit-animation-duration: .9s;
+    animation-name: popupAvatar;
+    animation-duration: .9s;
+}
+
+.box {
+    display: flex;
+    background-color: #f2f2f2;
+    padding: 5rem 5rem 3rem 5rem;
+    width: 65%;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    box-shadow: 5px 5px 26px 6px rgb(0, 0, 0, 0.2);
+    background-image: url(./images/background-box.JPG);
+    background-size: cover;
+    background-position: center; 
+}
+
+.information {
+    display: flex;
+    padding: 1rem .2rem;
+    position: relative;
+}
+
+.info:first-child {
+    flex-grow: 1;
+}
+
+.info:last-child .detail{
+    order: -1;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.detail {
+    margin: 0 1rem;
+}
+
+.detail p {
+    margin: 5px 0;
+}
+
+.name {
+    text-transform: uppercase;  
+    font-weight: 600;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    user-select: none;
+}
+
+.date {
+    font-size: 23pt;
+    font-weight: 600;
+}
+  
+.cout-time {
+    font-size: 18pt;
+    font-weight: 300;
+}
+
+.thank {
+    text-align: center;
+    font-weight: 300;
+    color: #f1bcbe;
+    margin-top: 6rem;
+    opacity: 0.8;
+    user-select: none;
+}
+
+.thank img {
+    width: 30px;
+    display: inline-block;
+    margin-left: .6rem;
+    position: relative;
+    top: .6rem;
+}
+
+.heart-box img {
+    width: 50px;
+}
+
+.heart-box {
+    position: absolute;
+    width: 100px;
+    top: calc(50% - 120px);
+    left: calc(50% - 50px);
+    text-align: center;
+    font-size: 15px;
+    margin-top: 1.2rem;
+    transform: scale(1);
+    animation: heartBeat 3s backwards ease infinite;
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(0.8);
+    }
+
+    25% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    75% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes popupAvatar {
+    0% {
+        transform: scale(0);
+    }
+
+    33.33% {
+        transform: scale(1.1);
+    }
+
+    66.66% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
