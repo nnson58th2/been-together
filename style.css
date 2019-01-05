@@ -126,7 +126,7 @@ h1  {
     font-size: 15px;
     margin-top: 1.2rem;
     transform: scale(1);
-    animation: heartBeat 3s backwards ease infinite;
+    animation: heartBeat 3s infinite;
 }
 
 @keyframes heartBeat {
