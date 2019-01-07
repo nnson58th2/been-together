@@ -36,4 +36,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     showDate();
     showTime();
+
+    // Tạo trái tim rơi
+  function createRandomHeart() {
+    var top = Math.floor(Math.random() * 100);
+    var left = Math.floor(Math.random() * screen.width);
+    var opacity = Math.random();
+    var body = document.body;
+    var heart = document.createElement('div');
+
+    heart.classList.add('heart-drop');
+    body.appendChild(heart);
+    heart.style.top = top + 'px';
+    heart.style.left = left + 'px';
+    heart.style.opacity = opacity;
+    setTimeout(runHeart, 10);
+    function runHeart() {
+        if (top > window.innerHeight) {
+            heart.remove();
+        } else {
+            top += 1;
+            heart.style.top = top + 'px';
+      }
+      setTimeout(runHeart, 10);
+    }
+    setTimeout(createRandomHeart, 400);
+  }
+  setTimeout(createRandomHeart, 1000);
 });

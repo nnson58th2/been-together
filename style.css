@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+ 
  body {
     margin: 0;
     padding: 0;
@@ -66,6 +69,7 @@ h1  {
 
 .detail {
     margin: 0 1rem;
+    color: #fff;
 }
 
 .detail p {
@@ -83,6 +87,8 @@ h1  {
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+    margin-top: -1.5rem;
+    margin-bottom: 3rem;
     user-select: none;
 }
 
@@ -96,11 +102,20 @@ h1  {
     font-weight: 300;
 }
 
+.posts {
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+    margin-top: 3rem;
+    user-select: none;
+}
+
 .thank {
     text-align: center;
     font-weight: 300;
-    color: #f1bcbe;
-    margin-top: 6rem;
+    font-family: 'Dancing Script', cursive;
+    color: #fffeff;
     opacity: 0.8;
     user-select: none;
 }
@@ -124,9 +139,19 @@ h1  {
     left: calc(50% - 50px);
     text-align: center;
     font-size: 15px;
-    margin-top: 1.2rem;
+    margin-top: 1rem;
     transform: scale(1);
     animation: heartBeat 3s infinite;
+}
+
+/* create dropdown heart icon */
+.heart-drop {
+    background-image: url(./images/hearts.svg);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 @keyframes heartBeat {
@@ -168,3 +193,66 @@ h1  {
         transform: scale(1);
     }
 }
+
+
+@media screen and (max-width: 998px) { 
+    .body {
+      overflow-x: hidden;
+    }
+    h1 {
+        margin: 12px 0 15px 0;
+    }
+    .box {
+      margin-bottom: 10rem;
+      padding: 20px;
+      width: 80%;
+    }
+    .information {
+      flex-direction: column;
+      align-items: center;
+      max-height: 175px;
+      padding: 0;
+    }
+    .heart-box {
+        margin-top: 11rem;
+    }
+    .info {
+      margin-bottom: 3rem;
+      flex-direction: column;
+    }
+    .detail {
+      margin-top: 0.3rem;
+    }
+    .info:last-child .detail{
+      order: 1;
+    }
+  
+    .info:first-child {
+      margin-bottom: 15rem;
+    }
+    .info:last-child {
+      margin-bottom: 0;
+    }
+    .name {
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .birthday {
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .time {
+      margin-top: 14rem;
+      margin-bottom: 0;
+      
+    }
+    .posts {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    .thank {
+      margin-top: 0;
+    }
+  }
