@@ -146,7 +146,7 @@ h1  {
 
 /* create dropdown heart icon */
 .heart-drop {
-    background-image: url(./images/hearts.svg);
+    background-image: url(./images/heart-like.svg);
     width: 20px;
     height: 20px;
     position: absolute;
