@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function showDate() {
         var first = new Date(2018, 0, 08);
         var now = new Date();
-        var date = Math.floor((now - first) / 86400000 + 1);
+        var date = Math.floor((now - first) / 86400000);
         innerDate.innerHTML = date;
-        // alert(date); 
         setTimeout(showDate, 1000);
     }
 
